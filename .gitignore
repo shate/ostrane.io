@@ -1,6 +1,5 @@
 .idea/
 dist/
-pic/
 sass/
 node_modules/
 package-lock.json
