@@ -1,0 +1,11 @@
+.idea/
+dist/
+css/
+img/
+js/
+pic/
+sass/
+node_modules/
+package-lock.json
+
+

@@ -1,0 +1,38 @@
+<% var data = {
+title: "О стране | Главная",
+filter:   _.template(require('./../includes/components/filter.html'))(),
+filterHotel:   _.template(require('./../includes/components/filterHotel.html'))(),
+statistix:   _.template(require('./../includes/components/statistix.html'))(),
+}; %>
+<%= _.template(require('./../includes/header.html'))(data) %>
+<!-- header -->
+<div class="container">
+    <div class="row m-0">
+        <%= _.template(require('./../includes/main-nav.html'))(data) %>
+    </div>
+    <div class="row m-0">
+        <div class="col-3">
+            <div class="row">
+                <aside class="w-100">
+                    <%= _.template(require('./../includes/index-aside.html'))(data) %>
+                </aside>
+            </div>
+        </div>
+        <div class="col-6">
+            <main role="main">
+                <%= _.template(require('./../includes/index.html'))(data) %>
+            </main>
+        </div>
+        <div class="col-3">
+            <div class="row">
+                <aside class="w-100">
+                    <%= _.template(require('./../includes/index-aside-right.html'))(data) %>
+                </aside>
+            </div>
+        </div>
+    </div>
+</div>
+<%= _.template(require('./../includes/footer.html'))(data) %>
+<script src="js/bundle.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+.list>li{
+  margin-bottom: 15px;
+  font-weight: bold;
+  &:hover{
+    a{
+      color: $th-title;
+    }
+  }
+}
+
+ul.list>li {
+  padding-left: 14px;
+  background-image: url(../img/li.png);
+  background-repeat: no-repeat;
+  background-position: 0 3px;
+  list-style: none;
+}
+
+.resalt{
+   li{
+     font-size: 14px;
+     position: relative;
+     span{
+       font-size: 12px;
+       font-weight: normal;
+       position: absolute;
+       left: 80px;
+     }
+   }
+}
+.regions {
+  list-style: decimal;
+  font-weight: bold;
+  color: #ca0000;
+  list-style-position: inside;
+  li{
+    margin-bottom: 10px;
+    font-weight: 700;
+    a{
+      color: #2d2d2d;
+    }
+  }
+}
+.operator-list{
+  li{
+    display: flex;
+    align-items: center;
+    height: 36px;
+    p{
+      margin-bottom: 0;
+      margin-left: 10px;
+    }
+  }
+}
+ul.hide-list{
+
+  border: 1px solid #DBDBDB;
+  border-radius: 5px;
+  padding: 23px 18px;
+  box-shadow: 0 2px 3px 2px rgba(#D6DDE0, .7);
+ background: linear-gradient(#fff, #F3F6F6);
+  >div{
+    margin-right: 15px;
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+  li{
+    overflow: hidden;
+    margin-bottom: 10px;
+    margin-right: 10px;
+
+    label{
+      width: 100%;
+      display: block;
+      font-style: normal;
+    }
+    label:after {
+
+      @include psevdo;
+      @include sprite($standart);
+      float: right;
+    }
+    input[type=checkbox]:checked + label:after{
+      @include sprite ($standart-on);
+
+
+    }
+  }
+
+}

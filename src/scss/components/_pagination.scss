@@ -1,0 +1,48 @@
+.pagination{
+  a{
+    color: $pagination;
+    &:hover{
+      text-decoration: none;
+    }
+  }
+    &__el{
+      margin: 0 6px;
+      width: 18px;
+      height: 18px;
+      display: inline-block;
+      text-align: center;
+      line-height: 19px;
+      border-radius: 50%;
+      background-color: transparent;
+      &.active{
+        font-weight: 700;
+        color: #fff;
+        background-color: $pagination-bg;
+      }
+    }
+  &__arrow{
+    font-weight: 700;
+    .arrow-next{
+      &:before{
+        content: '\2190';
+        margin-right: 5px;
+      }
+    }
+   @at-root .arrow-prev{
+      &:after{
+        content: '\2192';
+        margin-left: 5px;
+      }
+     }
+    .arrow-next, .arrow-prev{
+      &:hover{
+        color: $base-red;
+        &:before, &:after{
+          color: $pagination;
+        }
+      }
+    }
+    }
+
+  }
+

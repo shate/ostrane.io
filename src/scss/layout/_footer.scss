@@ -1,0 +1,26 @@
+footer {
+	padding-bottom: 60px;
+	min-width: 960px;
+	background-color: #fff;
+	background-image: linear-gradient(to top, rgba(76,179,230,.45), rgba(255,255,255,0));
+	margin-top: 15px;
+	border-top: 1px solid #d3d3d3;
+	.row  {
+		padding-top: 15px;
+
+	}
+}
+
+.footer__left {
+	&-el {
+		display: inline-block;
+		vertical-align: top;
+		margin-right: 30px;
+		font-size: 11px;
+		text-transform: uppercase;
+	}
+}
+.footer__right {
+	font-size: 11px;
+	text-transform: uppercase;
+}

@@ -1,0 +1,43 @@
+.toast{
+  font-size: 11px;
+  cursor: pointer;
+  min-width: 125px;
+  border-width: 2px;
+  border-color: $toast-border;
+  box-shadow: none;
+  height: 28px;
+  .close{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: $close-bg;
+    color: #fff;
+    font-size: 13px;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    text-shadow: none;
+    &:focus{
+      outline: none;
+    }
+  }
+  &-header{
+    padding:4px 6px;
+    color: $toast;
+  }
+  &.long{
+    width: 155px;
+  }
+  &:hover{
+    border-color: $toast-hover;
+
+    .close{
+      background-color: $slider-fill;
+    }
+    .toast-header{
+      color: $th-title;
+    }
+  }
+}

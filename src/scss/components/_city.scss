@@ -1,0 +1,38 @@
+.city__el {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  &-tooltip {
+    width: 82px;
+    height: 26px;
+    border-radius: 2px;
+    background-color: #c33;
+    box-shadow: 0 2px 3px rgba(48,84,102,.27);
+    border: solid 2px #fecb00;
+    background-image: -webkit-linear-gradient(bottom, #f4eb63, #fff 71%);
+    background-image: -moz-linear-gradient(bottom, #f4eb63, #fff 71%);
+    background-image: -o-linear-gradient(bottom, #f4eb63, #fff 71%);
+    background-image: linear-gradient(to top, #f4eb63, #fff 71%);
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    margin-left: -41px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 24px;
+    text-decoration: none;
+    color: #000;
+    &:after {
+      position: absolute;
+      top: -5px;
+      left: 50%;
+      margin-left: -4px;
+      @include sprite($city);
+      content: '';
+    }
+  }
+}

@@ -1,0 +1,202 @@
+.modal{
+  &.log{
+    border: 1px solid $modal-border;
+    @include box-shadow(2px, 0px, 59px, rgba(#868686, 0.5));
+    border-radius: 0.3rem;
+    width: 315px;
+    overflow: visible;
+    height: auto !important;
+    &-in{
+
+    }
+    .modal{
+      &-content{
+        border: none;
+        border-radius: 0;
+      }
+      &-body{
+        padding: 1rem 1.8rem;
+      }
+      &-header{
+        padding-bottom: 10px;
+        color:#fff;
+        margin: -1px -1px 0;
+        border: 1px solid #d68080;
+        background-image: linear-gradient(to bottom, #a90000 , #e90000);
+      }
+      &-title{
+        color:#fff;
+        font-size: 24px;
+        margin-bottom: 3px;
+      }
+
+    }
+    .close{
+      color: #fff;
+      right: 10px;
+      top: 4px;
+      font-weight: 400;
+      opacity: 1;
+      padding: 0;
+      font-size: 13px;
+
+    }
+    label{
+      font-size: 14px;
+      .reg{
+        @extend .arrow-prev;
+        color: #757575;
+        span{
+          text-decoration: underline;
+          font-size: 12px;
+        }
+    &:hover{
+      text-decoration: none;
+    }
+        &.no-arrow{
+          &:after{
+            display: none;
+          }
+        }
+      }
+    }
+    input{
+      &[type=text], &[type=password]{
+        height: 32px;
+      }
+      &::placeholder{
+        color: $base-red;
+        font-size: 13px;
+      }
+      &:-ms-input-placeholder{
+        color: $base-red;
+        font-size: 13px;
+
+      }
+      &::-ms-input-placeholder{
+        color: $base-red;
+        font-size: 13px;
+      }
+    }
+    button{
+      height: 26px;
+    }
+  }
+}
+form.filter{
+  border: 1px solid #EAD376;
+  border-bottom-color: #fff;
+  box-shadow: 0 1px 0 1px #EAD376;
+  border-radius: 5px;
+  padding: 20px 16px;
+  margin-bottom: 15px;
+  background-image: linear-gradient(#fff, #FFF8D1);
+  .row-chbox{
+    line-height: 20px;
+  }
+  .select-wrap-inner:nth-child(3){
+    margin-right: 0;
+  }
+  .row-chbox{
+    margin-bottom: 17px;
+    label:after{
+      @include psevdo;
+    }
+    label:before{
+      display: none;
+    }
+    label[for='pc1']:after{
+      @include sprite($ch1);
+    }
+    input[type=checkbox]:checked + label[for='pc1']:after{
+      @include sprite ($ch1-h);
+    }
+    label[for='pc2']:after{
+      @include sprite($ch2);
+    }
+    input[type=checkbox]:checked + label[for='pc2']:after{
+      @include sprite ($ch2-h);
+    }
+    label[for='pc3']:after{
+      @include sprite($ch3);
+    }
+    input[type=checkbox]:checked + label[for='pc3']:after{
+      @include sprite ($ch3-h);
+    }
+    label[for='pc4']:after{
+      @include sprite($ch4);
+    }
+    input[type=checkbox]:checked + label[for='pc4']:after{
+      @include sprite ($ch4-h);
+    }
+    label[for='pc4']:after{
+      @include sprite($ch4);
+    }
+    input[type=checkbox]:checked + label[for='pc4']:after{
+      @include sprite ($ch4-h);
+    }
+    label[for='pc5']:after{
+      @include sprite($ch5);
+    }
+    input[type=checkbox]:checked + label[for='pc5']:after{
+      @include sprite ($ch5-h);
+    }
+    label[for='pc6']:after{
+      @include sprite($ch6);
+    }
+    input[type=checkbox]:checked + label[for='pc6']:after{
+      @include sprite ($ch6-h);
+    }
+    label[for='pc7']:after{
+      @include sprite($ch7);
+    }
+    input[type=checkbox]:checked + label[for='pc7']:after{
+      @include sprite ($ch7-h);
+    }
+    label[for='pc8']:after{
+      @include sprite($ch8);
+    }
+    input[type=checkbox]:checked + label[for='pc8']:after{
+      @include sprite ($ch8-h);
+    }
+    label[for='pc9']:after{
+      @include sprite($ch9);
+    }
+    input[type=checkbox]:checked + label[for='pc9']:after{
+      @include sprite ($ch9-h);
+    }
+    label[for='pc10']:after{
+      @include sprite($ch10);
+    }
+    input[type=checkbox]:checked + label[for='pc10']:after{
+      @include sprite ($ch10-h);
+    }
+    label[for='pc11']:after{
+      @include sprite($ch11);
+    }
+    input[type=checkbox]:checked + label[for='pc11']:after{
+      @include sprite ($ch11-h);
+    }
+    label[for='pc12']:after{
+      @include sprite($ch12);
+    }
+    input[type=checkbox]:checked + label[for='pc12']:after{
+      @include sprite ($ch12-h);
+    }
+    label[for='pc13']:after{
+      @include sprite($ch13);
+    }
+    input[type=checkbox]:checked + label[for='pc13']:after{
+      @include sprite ($ch13-h);
+    }
+    label[for='pc14']:after{
+      @include sprite($ch14);
+    }
+    input[type=checkbox]:checked + label[for='pc14']:after{
+      @include sprite ($ch14-h);
+    }
+    span{
+      margin-right: 4%;
+    }
+  }
+}

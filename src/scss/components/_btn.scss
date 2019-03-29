@@ -1,0 +1,32 @@
+.btn{
+  &.small{
+    height: 20px;
+    line-height: 18px;
+  }
+  &.large{
+    height: 28px;
+    line-height: 28px;
+  }
+  &.remove{
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-image: linear-gradient(to bottom, #e6e6e6 , #fff);
+    border: 1px solid #ccd4d5;
+    &.close{
+      font-weight: 400;
+      color: #68696b;
+      opacity: 1;
+      font-size: 15px;
+      line-height: 2px;
+    }
+    &:hover{
+      background-image: linear-gradient(to bottom, #a60000 , #e90000);
+      border-color: #b30000;
+      &.close{
+        color: #fff;
+      }
+    }
+  }
+
+}

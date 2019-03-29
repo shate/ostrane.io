@@ -1,0 +1,117 @@
+.tabs{
+  &__hdr {
+    &-el {
+      display: inline-block;
+      vertical-align: top;
+      font-size: 13px;
+      font-weight: bold;
+      cursor: pointer;
+      color: #383a3b;
+      height: 37px;
+      background-image: url(../img/right_border.png), url(../img/tab_body.png);
+      background-repeat: no-repeat,repeat-x;
+      padding: 0 13px;
+      margin-right: 3%;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      padding-top: 13px;
+      position: relative;
+      text-transform: uppercase;
+      border-left: 1px solid #A8E7FB;
+      border-radius: 5px 0 0 0;
+      &.curr {
+        z-index: 3;
+      }
+      &:after {
+        width: 34px;
+        height: 37px;
+        position: absolute;
+        top: 0;
+        right: -34px;
+        z-index: 2;
+        background-image: url(../img/r_item.png);
+        content: '';
+      }
+      &:not(.curr):hover{
+        background-image: url(../img/right_border-h.png), url(../img/tab_body-h.png);
+        background-repeat: no-repeat,repeat-x;
+        border-left-color: #fff;
+        &:after {
+          background-image: url(../img/r_item-h.png);
+          background-repeat: no-repeat;
+        }
+      }
+      &.curr{
+        background-image :linear-gradient(#fff, #FCF3CF);
+        border-top: 1px solid #EAD376;
+        border-left: 1px solid #EAD376;
+        border-radius: 3px 0 0 0;
+        &:after{
+
+          @include psevdo;
+          position: absolute;
+          @include sprite($y-curr);
+
+        }
+      }
+    }
+  }
+  &__body {
+    padding: 10px 15px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border: 1px solid #ace3f3;
+    display: none;
+    &.curr {
+      display: block;
+    }
+    &.yellow{
+      padding-top: 17px;
+      background-image: linear-gradient(#fff, $th-bg);
+      border-color: $th-border;
+      .books-item{
+        margin-bottom: 20px;
+        text-align: center;
+        margin-top: 10px;
+        figure{
+          float: none;
+          margin-bottom: 5px;
+          margin-right: 0;
+
+        }
+        .f_wrap{
+          display: inline-block;
+          p{
+            text-align: left;
+          }
+        }
+      }
+      .end{
+        margin-bottom: 10px
+      }
+    }
+  }
+  &-text{
+    .tabs-link{
+      font-weight: 700;
+      font-size: 15px;
+      padding: 0 10px 5px;
+      border-bottom: 2px solid #000;
+      margin-right: 20px;
+      &.curr{
+        color: $base-red;
+        border-bottom: none;
+      }
+      &:active{
+        color: $base-orange !important;
+        border-color: $base-orange !important;
+      }
+      &:hover{
+        color: $hover-tab-link;
+        border-bottom: 2px solid $hover-tab-link;
+      }
+    }
+  }
+}

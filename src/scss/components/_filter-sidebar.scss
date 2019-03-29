@@ -1,0 +1,20 @@
+.filter-sidebar{
+  padding-top: 5px;
+  input{
+    width: 100%;
+    font-size: 11px;
+  }
+  &> label {
+    display: block;
+    margin-bottom: 17px;
+    position: relative;
+    .ico-search-gray {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+    }
+  }
+  .datepiker{
+    height: 75px;
+  }
+}

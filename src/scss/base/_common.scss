@@ -1,0 +1,49 @@
+.wrap,.article {
+  margin-bottom: 20px;
+  &.bordered {
+    border-bottom: 1px dotted #c9c9c9;
+    padding-bottom: 15px;
+  }
+}
+.fll {
+  float: left;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+.colum-2{
+  -moz-column-count: 2;
+  -webkit-column-count: 2;
+  column-count: 2;
+}
+figure{
+  border: 1px solid #D3D3D3;
+  border-radius: 5px;
+  padding: 1px;
+  display: inline-block;
+  float: left;
+  line-height: 0;
+  margin-right: 10px;
+  margin-bottom: 15px;
+}
+ul, ol{
+  list-style: none;
+  padding-left: 0;
+}
+.show-dashed span {
+  border-bottom: 1px dashed #42454c;
+  color: #42454c;
+  cursor: pointer;
+  margin-left: -300px;
+}
+.dotted{
+  border-style: dotted !important;
+}
+.tabs-link, .remove-file{
+  cursor: pointer;
+}
+.hide-box{
+  display: none;
+  position: absolute;
+  z-index: 10;
+  top: 35px;
+}

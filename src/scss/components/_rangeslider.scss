@@ -1,0 +1,17 @@
+.rangeslider{
+  height: 7px;
+  &__fill{
+    background: $slider-fill;
+  }
+  &__handle{
+    width: 20px;
+    height: 20px;
+    top: -6px !important;
+    &:after{
+      background: $slider-fill;
+      width: 8px;
+      height: 8px;
+    }
+  }
+
+}

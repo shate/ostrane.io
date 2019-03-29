@@ -1,0 +1,27 @@
+.alert{
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 12px;
+  display: inline-block;
+  padding: 4px 8px 4px 4px;
+  margin-bottom: 12px;
+  border: none;
+  &-danger{
+    background-color: $dangers;
+    .circle{
+      color: $dangers;
+    }
+  }
+  &-success{
+    background-color: $successs;
+    .circle{
+      color: $successs;
+    }
+  }
+  &-prinary{
+    background-color: $prinarys;
+    .circle{
+      color: $prinarys;
+    }
+  }
+}

@@ -1,0 +1,142 @@
+.description {
+  padding-left: 35px;
+  position: relative;
+
+  &:before {
+    @include psevdo;
+    @include sprite($descript);
+    position: absolute;
+    left: 18px;
+    top: 0;
+  }
+
+  &-item {
+    overflow: hidden;
+    display: flex;
+    align-items: flex-start;
+    &.tour{
+      padding: 18px 22px;
+      background: linear-gradient( #f9e8a0, #fff);
+      border-radius: 10px;
+      border: 1px solid #fff;
+      box-shadow: 0 0 1px 1px #ead376;
+      margin-bottom: 10px;
+      figure{
+        position: relative;
+        img{
+          width: 106px;
+          height: 106px;
+        }
+        &:after{
+          content: '';
+          @include sprite($letf-coner);
+          position: absolute;
+          right: -11px;
+          top: 0;
+
+        }
+      }
+      .description-item-article{
+        padding-left: 10px;
+        width: 100%;
+      }
+     &.quotes{
+       &:before, &:after{
+         content: '';
+         @include sprite($quotes);
+         transition:  0.5s;
+         width: 0;
+       }
+
+       &:after{
+         transform: rotate(180deg) scale(-1, 1);
+         align-self: flex-end;
+
+       }
+       &:hover{
+         justify-content: space-between;
+         box-shadow: 0 0 1px 1px #b9b9b9;
+         background: linear-gradient( #f5f5f5, #fff);
+         &:before, &:after{
+           width: 20px;
+         }
+         &:before{
+           margin-right: 10px;
+         }
+         &:after{
+           margin-left: 10px;
+         }
+       }
+     }
+    }
+    .addres {
+      margin-bottom: 10px;
+
+    }
+
+    figure {
+      margin-bottom: 0;
+      background-color: #fff;
+
+    }
+
+    .red {
+      font-style: italic;
+      margin-left: 20px;
+
+    }
+
+    .ico-list {
+      float: right;
+      position: relative;
+      top: 13px;
+
+      li {
+        text-align: center;
+        margin: 0 5px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    .author__el-control {
+      float: none;
+
+      a {
+        margin-left: 0;
+        margin-right: 10px;
+      }
+    }
+
+    &.small {
+      font-size: 100%;
+      article {
+        margin-left: 12px;
+      }
+
+      a.yellow {
+        margin-top: 0;
+      }
+    }
+
+    .date {
+      color: #ca0000;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .tour__el-left {
+      width: 100%;
+      float: none;
+      margin-top: 5px;
+
+      .tour__el-link {
+        display: inline-block;
+        font-weight: normal;
+      }
+    }
+  }
+
+}

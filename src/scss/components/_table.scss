@@ -1,0 +1,46 @@
+.table{
+  &.th-yellow{
+    border: 1px solid $th-border;
+    th{
+      background-image: linear-gradient(#fff, $th-bg);
+      border: 1px solid $th-border;
+      box-shadow: 0 -1px  1px #fff inset,  1px 0 1px #fff inset;
+      text-align: center;
+      color: $th-title;
+      font-weight: 700;
+      font-size: 14px;
+    }
+    td{
+      font-size: 12px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      border-top-color: $th-border;
+      &:nth-child(2){
+        vertical-align: middle;
+        font-weight: 700;
+        color: #000;
+      }
+      figure{
+        margin: 0;
+      }
+    }
+    &.bordered{
+      td{
+        border-left: 1px solid $th-border;
+        &:first-child{
+          border-left: none;
+        }
+      }
+    }
+    &.striped{
+      tbody{
+        tr{
+          &:nth-child(even){
+            background-color: $td-bg;
+          }
+        }
+      }
+
+    }
+  }
+}

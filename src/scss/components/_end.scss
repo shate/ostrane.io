@@ -1,0 +1,89 @@
+.end {
+  padding-top: 14px;
+  border-top: 1px dotted #a6a6a6;
+
+  &.top_margin {
+    margin-top: 20px;
+  }
+  &.no_border {
+    border-top: none;
+  }
+
+  &.red>a {
+    box-shadow: inset 0 1px rgba(255,255,255,.3);
+    border: solid 1px #b30000;
+    background-image: -webkit-linear-gradient(top, #a60000 32%, #e90000);
+    background-image: -moz-linear-gradient(top, #a60000 32%, #e90000);
+    background-image: -o-linear-gradient(top, #a60000 32%, #e90000);
+    background-image: linear-gradient(to bottom, #a60000 32%, #e90000);
+    color: #fff;
+    &:after {
+      background-position: 0 -270px;
+    }
+  }
+  &>a, &.btn{
+    display: inline-block;
+    border-radius: 3px;
+    background-color: #ddd;
+    box-shadow: inset 0 1px rgba(255,255,255,.2), inset 0 0 0 1px #ffffbe;
+    border: solid 1px #c1cacb;
+    background-image: linear-gradient(to bottom, #e6e6e6 , #fff);
+    line-height: 22px;
+    height: 24px;
+    font-size: 10px;
+    color: #42454c;
+    padding: 0 24px 0 7px;
+    position: relative;
+    &:after {
+      position: absolute;
+      top: 50%;
+      margin-top: -2.5px;
+      right: 7px;
+      @include sprite($end);
+      content: '';
+
+    }
+    &:hover, &.sub {
+      box-shadow: inset 0 1px rgba(255,255,255,.3);
+      border: solid 1px #b30000;
+      background-image: linear-gradient(to bottom, #a60000 32%, #e90000);
+      color: #fff;
+      text-decoration: none;
+      &:after {
+        @include sprite($wend);
+      }
+    }
+    &.sub{
+      height: 37px;
+      font-size: 14px;
+    }
+    &:active{
+      color: #fff;
+      background-size: 100%;
+      border-color: #dc6105;
+      background-image: linear-gradient(to bottom, #dd6100, #f98d00);
+      box-shadow: inset 0 2px #fe8628;
+    }
+    &.disabled{
+      color: #fff;
+      background-size: 100%;
+      background-image: linear-gradient(to bottom, #a2a2a2, #cacaca);
+      border-color: #fff;
+      box-shadow: 0 0 1px 1px #c3cccd;
+      &:after {
+        @include sprite($wend);
+      }
+      &:hover{
+        border-color: #dc6105;
+        background-image: linear-gradient(to bottom, #dd6100, #f98d00);
+        box-shadow: inset 0 2px #fe8628;
+      }
+    }
+  }
+  &.no-arrow{
+    &:after{
+      display: none;
+      padding: 0 7px;
+    }
+  }
+}

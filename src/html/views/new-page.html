@@ -1,0 +1,32 @@
+<% var data = {
+title: "О стране | Новая страница",
+newObj:   _.template(require('./../includes/components/style-aside-new.html'))(),
+filter:   _.template(require('./../includes/components/filter.html'))(),
+statistix:   _.template(require('./../includes/components/statistix.html'))(),
+
+}; %>
+<%= _.template(require('./../includes/header.html'))(data) %>
+<!-- header -->
+<div class="container">
+    <div class="row m-0">
+        <%= _.template(require('./../includes/main-nav.html'))(data) %>
+    </div>
+    <div class="row m-0">
+        <div class="col-3">
+            <div class="row">
+                <aside class="w-100">
+                    <%= _.template(require('./../includes/style-aside.html'))(data) %>
+                </aside>
+            </div>
+        </div>
+        <div class="col-9">
+            <main role="main">
+                <%= _.template(require('./../includes/new-page.html'))(data) %>
+            </main>
+        </div>
+    </div>
+</div>
+<%= _.template(require('./../includes/footer.html'))(data) %>
+<script src="js/bundle.js"></script>
+</body>
+</html>

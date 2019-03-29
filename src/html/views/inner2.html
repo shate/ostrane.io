@@ -1,0 +1,29 @@
+<% var data = {
+title: "О стране | Внутренняя 2",
+
+}; %>
+<%= _.template(require('./../includes/header.html'))(data) %>
+<!-- header -->
+<div class="container">
+    <div class="row m-0">
+        <%= _.template(require('./../includes/main-nav.html'))(data) %>
+    </div>
+    <div class="row m-0">
+        <div class="col-3">
+            <div class="row">
+                <aside class="w-100">
+                    <%= _.template(require('./../includes/aside-inner.html'))(data) %>
+                </aside>
+            </div>
+        </div>
+        <div class="col-9">
+            <main role="main">
+                <%= _.template(require('./../includes/inner2.html'))(data) %>
+            </main>
+        </div>
+    </div>
+</div>
+<%= _.template(require('./../includes/footer.html'))(data) %>
+<script src="js/bundle.js"></script>
+</body>
+</html>

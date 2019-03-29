@@ -1,0 +1,129 @@
+.sprite {
+  display: inline-block;
+  &.rubl {
+    @include sprite($rub);
+  }
+  &.ru {
+    @include sprite($ru);
+  }
+  &.uk {
+    @include sprite($uk);
+  }
+  &.search {
+    @include sprite($search);
+  }
+
+  &.toggle {
+    @include sprite($toggle);
+  }
+  &.time {
+    @include sprite($time);
+  }
+  &.tur {
+    @include sprite($tur);
+  }
+
+  &.hot {
+    @include sprite($hot);
+    position: relative;
+    top: 2px;
+  }
+  &.sl {
+    background-position: -150px -116px;
+    display: block;
+    width: 50px;
+    height: 14px;
+    margin-top: 5px;
+  }
+  &.pero {
+    width: 42px;
+    height: 49px;
+    background-position: -107px -95px;
+  }
+  &.smile {
+    @include sprite($smile);
+  }
+  &.comment {
+    @include sprite($comment);
+    margin-right: 2px;
+  }
+  &.like {
+    @include sprite($like);
+    margin-right: 2px;
+    position: relative;
+    top: -2px;
+  }
+  &.achive {
+    @include sprite($redbest);
+    position: absolute;
+    top: -2px;
+    left: -3px;
+  }
+  &.rest{
+    @include sprite($rest);
+  }
+  &.club{
+    @include sprite($club);
+  }
+  &.walk{
+     @include sprite($wolk);
+   }
+  &.auto{
+    @include sprite($ch7-h);
+  }
+  &.bus{
+    @include sprite($ch6-h);
+  }
+  &.upload{
+    @include sprite($up-load);
+  }
+}
+.ico{
+  &-search-gray{
+    @include sprite($search-gray);
+    display: inline-block;
+  }
+  &.circle{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    align-items: center;
+    text-align: center;
+    line-height: 14px;
+    margin-right: 6px;
+    font-weight: 700;
+    font-style: normal;
+    &.white{
+      background-color: #fff;
+    }
+  }
+  &-c-of{
+    @include sprite($cof);
+    position: relative;
+    margin-left: 10px;
+    top: 5px;
+    cursor: pointer;
+    display: inline-block;
+  }
+  &-ch4-h{
+    @include sprite ($ch4-h);
+  }
+  &-ch7-h{
+    @include sprite ($ch7-h);
+  }
+  &-ch11-h{
+    @include sprite ($ch11-h);
+  }
+  &-ch15-h{
+    @include sprite ($ch15-h);
+  }
+}
+.button-date{
+  @include sprite($calendar);
+  display: inline-block;
+  left: 10px;
+  top: 50%;
+  margin-top: -6px;
+  cursor: pointer;
+}

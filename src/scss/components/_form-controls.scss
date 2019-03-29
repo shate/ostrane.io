@@ -1,0 +1,185 @@
+input[type="text"]:not(.header__search-input),
+.select-wrap p ,
+input[type="email"],
+input[type="tel"],
+input[type="password"]
+{
+  border: 1px solid $input-border;
+  height: 28px;
+  border-radius: 3px;
+  padding-left: 10px;
+  box-sizing: border-box;
+  &:focus{
+    outline: none;
+    box-shadow: none;
+    border: 1px solid $input-border;
+  }
+}
+
+.select-wrap{
+  position: relative;
+  padding-top: 20px;
+
+  select{
+    right: 0;
+    height: 27px;
+    width: 100%;
+  }
+  &-inner{
+    display: inline-block;
+    position: relative;
+    width: 200px;
+    margin-right: 4.7%;
+    label{
+      position: static;
+    }
+    &:nth-child(3){
+      p, select{
+        right: 0;
+      }
+    }
+  }
+  &.tikets {
+    font-size: 11px;
+
+  }
+}
+input[type=checkbox], input[type=radio] {
+  display: none;
+}
+
+  .chb-wrap {
+    label {
+      cursor: pointer;
+      font-weight: 400 !important;
+    }
+
+    label:before {
+      @include psevdo;
+      top: 3px;
+      margin-right: 10px;
+      @include sprite($standart);
+
+    }
+
+    input[type=checkbox]:checked + label:before {
+      @include sprite($standart-on-red);
+      margin-right: 8px;
+    }
+
+    &.grad {
+      input[type=checkbox]:checked + label:before {
+        @include sprite($standart-grad);
+        margin-right: 10px;
+      }
+    }
+   label[for^=ch]{
+      &:after {
+       @include psevdo;
+       top: 5px;
+       margin-left: 10px;
+       @include sprite($of);
+     }
+     &:before{
+       display: none;
+     }
+   }
+    input[type=checkbox]:checked + label[for^=ch]:after {
+      @include sprite ($on);
+    }
+  }
+.radio-wrap{
+  @extend .chb-wrap;
+  label:before{
+    @include sprite($checkbox);
+  }
+  &.grad{
+    input[type=radio]:checked + label:before{
+      @include sprite($checkbox-grad);
+      margin-right: 11px;
+    }
+  }
+}
+.form{
+  &-post{
+    label{
+      font-size: 14px;
+      font-weight: 700;
+    }
+    input{
+      color: $base-font-color;
+      font-size: 12px;
+
+      &::placeholder{
+        color: $base-font-color;
+        font-size: 12px;
+      }
+      &:-ms-input-placeholder{
+        color: $base-font-color;
+        font-size: 12px;
+
+      }
+      &::-ms-input-placeholder{
+        color: $base-font-color;
+        font-size: 12px;
+      }
+    }
+    textarea{
+      &::placeholder{
+        font-style: italic;
+        color: $textarea-color;
+        font-size: 12px;
+      }
+      &:-ms-input-placeholder{
+        font-style: italic;
+        color: $textarea-color;
+        font-size: 12px;
+
+      }
+      &::-ms-input-placeholder{
+        font-style: italic;
+        color: $textarea-color;
+        font-size: 12px;
+      }
+    }
+  }
+}
+textarea.form-control{
+  resize: none;
+  font-style: italic;
+  font-size: 12px;
+  color: $textarea-color;
+  &:focus{
+    outline: none;
+    box-shadow: none;
+    border: 1px solid $input-border;
+  }
+}
+.form-control{
+  &.text-bold{
+    font-weight: 700;
+  }
+  &.text-italic{
+    &::placeholder{
+      font-style: italic;
+      color: $textarea-color;
+      font-size: 12px;
+    }
+    &:-ms-input-placeholder{
+      font-style: italic;
+      color: $textarea-color;
+      font-size: 12px;
+
+    }
+    &::-ms-input-placeholder{
+      font-style: italic;
+      color: $textarea-color;
+      font-size: 12px;
+    }
+  }
+}
+fieldset{
+  border: 1px solid #dedede;
+  padding:  17px 0;
+  border-radius: 10px;
+}

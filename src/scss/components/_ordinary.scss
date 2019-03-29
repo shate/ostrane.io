@@ -1,0 +1,74 @@
+.ordinary{
+  &__h2{
+    height: 48px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    box-shadow: inset 0 0 0 2px rgba(255,255,255,.7);
+    border: solid 1px #d5d5d5;
+    border-bottom: none;
+    background-image: url(../img/h2.png);
+    padding-top: 0px;
+    padding-left: 12px;
+    font-size: 28px;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0,0,0,.5);
+    margin-bottom: 10px;
+    background-repeat: repeat-x;
+    &>span {
+      display: inline-block;
+      position: relative;
+      padding-top: 0;
+      top: -18px;
+      &>i {
+        position: relative;
+        top: 8px;
+      }
+    }
+    &.green {
+      background-image: url(../img/h2_green.png);
+    }
+  }
+  &__h3{
+    font-size: 13px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #383a3b;
+    position: relative;
+    background-image: url(../img/h3__down.png);
+    background-repeat: repeat-x;
+    margin-right: 4px;
+    &:after {
+      @include sprite($afterordinary);
+      position: absolute;
+      bottom: 7px;
+      content: '';
+      right: -4px;
+    }
+    &>span {
+      padding: 10px 11px 7px 13px;
+      line-height: 16px;
+      display: inline-block;
+      background-image: url(../img/h3__bg.png);
+      background-color: #fff;
+      position: relative;
+      background-repeat: repeat-x;
+      margin-left: 3px;
+      &:before {
+        position: absolute;
+        top: 0;
+        left: -3px;
+        content: '';
+        @include sprite($beforeordinary);
+      }
+      &:after {
+        position: absolute;
+        top: 0;
+        right: -22px;
+        @include sprite($ordinary);
+        content: '';
+        background-color: #fff;
+      }
+    }
+  }
+}

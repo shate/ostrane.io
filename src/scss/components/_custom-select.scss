@@ -1,0 +1,73 @@
+.custom-select{
+   &-option{
+     cursor: pointer;
+     &:before{
+       content: '\2022';
+       padding-right: 0.5em;
+     }
+     &.has-focus{
+       background-color: #fff;
+       color: $base-red;
+     }
+     &.is-selected{
+       &:before{
+         content: '\2022';
+       }
+     }
+   }
+  &-container{
+    width: 100%;
+    &.is-open{
+      .custom-select-panel{
+        border: 1px solid #D2DCE3;
+        border-top: none;
+        margin-top: 2px;
+        &:hover{
+          border: 1px solid $base-red;
+        }
+      }
+
+    }
+  }
+  &-opener{
+    background-color: #fff;
+    @extend input[type="text"];
+    position: relative;
+    &:after{
+      content: '';
+      position: absolute;
+      @include sprite($down);
+      right: 10px;
+      top: 11px;
+    }
+  }
+  &-panel{
+    background-color: #fff;
+
+    font-style: italic;
+
+  }
+
+
+}
+.post-select{
+  .custom-select-opener{
+    &:after{
+      content: '';
+      position: absolute;
+      @include sprite($c-of-b);
+      right: -1px;
+      top: -1px;
+    }
+    &:hover{
+      &:after{
+        @include sprite($custom-select);
+      }
+    }
+    &:active{
+      &:after{
+        @include sprite($custom-select-a);
+      }
+    }
+  }
+}
